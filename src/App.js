@@ -1,28 +1,14 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import {
   LayoutDashboard,
-  Clock,
   CalendarDays,
   Users,
   CheckCircle2,
   XCircle,
   AlertTriangle,
-  X,
-  Check,
-  LogIn,
-  LogOut,
   UserCircle2,
   ShieldCheck,
 } from "lucide-react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
 import { diffDaysInclusive, formatDate, nowHHMM, todayISO, workedHours } from "./common/FunctionCommon";
 import { PageHeader } from "./component/PageHeader";
 import { StatusBadge } from "./component/StatusBadge";
@@ -38,7 +24,6 @@ const EMPLOYEES = [
 ];
 
 const CURRENT_USER_ID_DEFAULT = "NV-001";
-const MANAGER_ID = "NV-004";
 
 const INITIAL_TIMELOGS = [
   { id: 1, employeeId: "NV-001", date: "2026-06-19", checkIn: "08:32", checkOut: "17:45" },
